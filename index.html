@@ -4,11 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <title>animated Slideshow</title>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="slideshow-wrapper">
+            <!-- Start: Left Arrow -->
+            <div class="control left-arrow">
+                <div class="arrow">
+                    <div class="line line-1"></div>
+                    <div class="line line-2"></div>
+                </div>
+            </div>
+            <!-- End: Left Arrow -->
+
+            <!-- Start: Slides -->
+            <div class="slides">
+                <div class="slide slide-1">
+                    <img src="images/slide-img-1.jpg" alt="image 1">
+                </div>
+
+                <div class="slide slide-2">
+                    <img src="images/slide-img-2.jpg" alt="image 2">
+                </div>
+                <div class="slide slide-3">
+                    <img src="images/slide-img-3.jpg" alt="image 3">
+                </div>
+                <div class="slide slide-4">
+                    <img src="images/slide-img-4.jpg" alt="image 4">
+                </div>
+                <div class="slide slide-5">
+                    <img src="images/slide-img-5.jpg" alt="image 5">
+                </div>
+                <div class="slide slide-6">
+                    <img src="images/slide-img-6.jpg" alt="image 6">
+                </div>
+            </div>
+            <!-- End: Slides -->
+
+            <!-- Start: Right Arrow -->
+            <div class="control right-arrow">
+                <div class="arrow">
+                    <div class="line line-3"></div>
+                    <div class="line line-4"></div>
+                </div>
+            </div>
+            <!-- End: Right Arrow -->
+
+            <!-- Start: Slideshow Controls -->
+            <div class="play-pause">
+                <i class="fas fa-play"></i>
+            </div>
+            <!-- End: Slideshow Controls -->
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
