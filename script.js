@@ -22,6 +22,18 @@ const changeSlides = () => {
     })
 }
 
+const arrowsVisibility = () => {
+    const arrows = document.querySelectorAll('.control')
+
+    Array.from(arrows).forEach(arrow => {
+        if(!playPauseBool) {
+            arrow.classList.add('arrows-visibility')
+        } else {
+            arrow.classList.remove('arrows-visibility')
+        }
+    })
+}
+
 const playPause = () => {
 
     if(playPauseBool) {
@@ -37,6 +49,7 @@ const playPause = () => {
     }
 
     changePlayPause()
+    arrowsVisibility()
     
 }
 
