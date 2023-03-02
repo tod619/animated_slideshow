@@ -9,6 +9,8 @@ const changeSlides = () => {
 
     if(current > slides.length){
         current = 1
+    } else if(current === 0){
+        current = slides.length
     }
 
     slides.forEach(slide => {
@@ -54,6 +56,24 @@ const changePlayPause = () => {
 
 document.querySelector('.play-pause').addEventListener('click', () => {
     playPause()
+})
+
+document.querySelector('.left-arrow').addEventListener('click', () => {
+    if(!playPauseBool){
+        playPause()
+    }
+
+        current--
+        changeSlides()    
+})
+
+document.querySelector('.right-arrow').addEventListener('click', () => {
+    if(!playPauseBool){
+        playPause()
+    }
+
+        current++
+        changeSlides()    
 })
 
 changeSlides()
