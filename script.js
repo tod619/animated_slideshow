@@ -1,4 +1,6 @@
 let current = 1
+let playPauseBool = true
+let interval 
 
 // Change slides function
 const changeSlides = () => {
@@ -19,11 +21,40 @@ const changeSlides = () => {
 }
 
 const playPause = () => {
-    setInterval(()=> {
-        current++;
-        changeSlides()
-    }, 3000)
+
+    if(playPauseBool) {
+        interval = setInterval(()=> {
+                    current++;
+                    changeSlides()
+                }, 3000)
+        
+        playPauseBool = false
+    } else {
+        clearInterval(interval)
+        playPauseBool = true
+    }
+
+    changePlayPause()
+    
 }
+
+const changePlayPause = () => {
+    const icon = document.querySelector('.play-pause i')
+
+    const cls = icon.classList[1]
+
+    if(cls === 'fa-play'){
+        icon.classList.remove('fa-play')
+        icon.classList.add('fa-pause')
+    } else {
+        icon.classList.remove('fa-pause')
+        icon.classList.add('fa-play')
+    }
+}
+
+document.querySelector('.play-pause').addEventListener('click', () => {
+    playPause()
+})
 
 changeSlides()
 playPause()
